@@ -1,0 +1,6 @@
+set(CHECK_oneAPI $ENV{SETVARS_COMPLETED})
+if(NOT CHECK_oneAPI)
+    message(FATAL_ERROR "OneAPI was not found, please install oneAPI and set the environment firstly")
+endif()
+
+include("${CMAKE_CURRENT_LIST_DIR}/ImplTargets.cmake")
